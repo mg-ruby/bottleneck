@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/maratgaliev/bottleneck.svg?branch=master)](https://travis-ci.org/maratgaliev/bottleneck)
+
 # Bottleneck
 
 Bottleneck - simple Redis based requests limiter.
