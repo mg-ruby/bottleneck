@@ -11,3 +11,5 @@ Style/StringLiterals:
   SupportedStyles:
     - single_quotes
     - double_quotes      
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']

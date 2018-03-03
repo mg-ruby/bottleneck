@@ -2,8 +2,8 @@ require "bottleneck/constants"
 
 module Bottleneck
   class Core
-    def initialize(request)
-      @ip = request.remote_ip.to_s
+    def initialize(ip)
+      @ip = ip.to_s
       @storage = Bottleneck.storage
       @limits = Bottleneck.config["limits"]
     end

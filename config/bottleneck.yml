@@ -1,0 +1,3 @@
+limits:
+  time_period_seconds: 3
+  max_requests_count: 3
