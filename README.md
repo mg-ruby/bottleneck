@@ -1,9 +1,6 @@
 # Bottleneck
 
-Bottleneck - simple Redis based requests limiter with two params:
-
-*  time_period_seconds: 3600
-*  max_requests_count: 100
+Bottleneck - simple Redis based requests limiter.
 
 ## Installation
 
@@ -27,29 +24,35 @@ Create two yaml files in config dir:
 
 **bottleneck.yml**
 
+```ruby
 limits:
   time_period_seconds: 3600
   max_requests_count: 100
-
+```
 **redis.yml**
+
+```ruby
 host: 'localhost'
 port: 6379
+```
 
-Add before action:
+Add before action to your controller:
+```ruby
 class ApplicationController < ActionController::API
   before_action :check_limit
 
   private
 
   def check_limit
-    result = Bottleneck.check(request)
+    result = Bottleneck.check(request.remote_ip)
     render status: result[:status], json: { message: result[:message] }
   end
 end
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/maratgaliev/bottleneck. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at [https://github.com/maratgaliev/bottleneck](https://github.com/maratgaliev/bottleneck).
 
 ## License
 
