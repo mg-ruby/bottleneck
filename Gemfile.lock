@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bottleneck (0.4.3)
+    bottleneck (0.4.4)
       redis (~> 4.0)
       redis-namespace (~> 1.6)
 
