@@ -19,8 +19,8 @@ module Bottleneck
         @storage.expire(key, @limits["time_period_seconds"])
       end
       if requests_count.to_i >= @limits["max_requests_count"]
-        result["status"] = Constants::EXPIRED_STATUS
-        result["message"] = message(period(key))
+        result[:status] = Constants::EXPIRED_STATUS
+        result[:message] = message(period(key))
       else
         @storage.incr(key)
       end

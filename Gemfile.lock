@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bottleneck (0.1.0)
+    bottleneck (0.4.0)
       redis
 
 GEM
