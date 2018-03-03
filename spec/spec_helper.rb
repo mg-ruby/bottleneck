@@ -1,6 +1,7 @@
 require "bundler/setup"
 require "bottleneck"
 require "bottleneck/core_helpers"
+require "fakeredis"
 
 RSpec.configure do |config|
   config.include CoreHelpers

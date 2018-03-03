@@ -25,6 +25,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "rubocop", "~> 0.52.1"
+  spec.add_development_dependency "rdoc", "~> 6.0.1"
+  spec.add_development_dependency "fakeredis", "~> 0.6"
   spec.add_dependency "redis", "~> 4.0"
   spec.add_dependency "redis-namespace", "~> 1.6.0"
 end

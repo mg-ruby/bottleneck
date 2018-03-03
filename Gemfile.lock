@@ -10,12 +10,15 @@ GEM
   specs:
     ast (2.4.0)
     diff-lcs (1.3)
+    fakeredis (0.7.0)
+      redis (>= 3.2, < 5.0)
     parallel (1.12.1)
     parser (2.5.0.2)
       ast (~> 2.4.0)
     powerpack (0.1.1)
     rainbow (3.0.0)
     rake (10.5.0)
+    rdoc (6.0.1)
     redis (4.0.1)
     redis-namespace (1.6.0)
       redis (>= 3.0.4)
@@ -48,7 +51,9 @@ PLATFORMS
 DEPENDENCIES
   bottleneck!
   bundler (~> 1.16)
+  fakeredis (~> 0.6)
   rake (~> 10.0)
+  rdoc (~> 6.0.1)
   rspec (~> 3.0)
   rubocop (~> 0.52.1)
 
